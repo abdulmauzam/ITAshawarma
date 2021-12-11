@@ -1,0 +1,86 @@
+@import url(https://fonts.google.com/specimen/Fuzzy+Bubbles#standard-styles);
+
+.bar {
+  background: black;
+  width: 100vw;
+  height: 65px;
+}
+.heading {
+  font-family: "Fuzzy Bubbles", cursive;
+  margin-left: 5rem;
+  margin-top: 0.9rem;
+  color: white;
+}
+.heading2 {
+  font-family: "Fuzzy Bubbles", cursive;
+  margin-left: 1.8rem;
+  margin-top: 0.9rem;
+  text-align: center;
+  color: white;
+}
+.orderButton {
+  font-family: "Fuzzy Bubbles", cursive;
+  height: 2.5rem;
+  width: 15rem;
+  margin-left: 2rem;
+  margin-top: 0.75rem;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.link_wrapper {
+  position: relative;
+  transform: translate(14%, 35%);
+}
+
+.a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 35px;
+  font-weight: bold;
+  text-decoration: none;
+  background: white;
+  text-align: center;
+  font-family: "Fuzzy Bubbles", cursive;
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all 0.35s;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all 0.35s;
+}
+
+.a:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.a:hover + .icon {
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
