@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { AppBar } from "@material-ui/core";
 import "./appbar.css";
 import Button from "@mui/material/Button";
-import {GoLocation} from "react-icons/go";
+import { GoLocation } from "react-icons/go";
 import { Container } from "react-bootstrap";
 export default function ApppBar() {
   const location =
@@ -12,7 +12,12 @@ export default function ApppBar() {
   return (
     <div>
       <AppBar
-        style={{ height: "65px", backgroundColor: "#0c043b", width: "100vw" }}
+        style={{
+          height: "65px",
+          backgroundColor: "#0c043b",
+          width: "100%",
+          position:"fixed",
+        }}
       >
         <div className="d-flex flex-row">
           <img
@@ -26,9 +31,7 @@ export default function ApppBar() {
             }}
           />
           <Button onClick={() => window.open(location)}>
-            
-            <GoLocation size={"30px"} style={{color:"white"}}></GoLocation>
-            
+            <GoLocation size={"30px"} style={{ color: "white" }}></GoLocation>
           </Button>
           <Button>
             <h4 className="heading2"> HOME </h4>

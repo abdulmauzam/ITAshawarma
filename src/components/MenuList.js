@@ -2,15 +2,23 @@ import React from "react";
 import { Card } from "@material-ui/core";
 
 import "./menu.css";
-import { FaRupeeSign } from "react-icons/fa";
-import shawarma from "./images/shawarma.jpeg";
-import { Container } from "react-bootstrap";
-import chicken from "./images/chickenBurger.jpeg";
-import fries from "./images/fries,burgers.jpg";
-import Button from "@mui/material/Button";
+
 
 export const Menu = () => {
   
-  return(<div></div>);
+  return(<>
+    <div className="heading">Burgers</div>
+    <div className="heading">Sandwiches</div>
+    <div className="heading">Pizzas</div>
+    <div className="heading">Salads</div>
+    <div className="heading">Shawarma</div>
+    <div className="heading">Fries</div>
+    <div className="heading">Pasta</div>
+    <div className="heading">Deserts</div>
+    <div className="heading">Milkshakes</div>
+    <div className="heading">Beverages</div>
+
+    
+    </>);
 
 };

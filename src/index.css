@@ -82,6 +82,14 @@ body {
 
 .menuHeading{
   font-family: "Fuzzy Bubbles", cursive;
+  
+}
+.tabHeading{
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 22px;
+  
+  color: white;
+  position: -ms-page;
 }
 .grid{
   display: grid;
