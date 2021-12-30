@@ -13,101 +13,102 @@ const DUMMY_DATA = [
   },
   { item: "shake", recipe: "meat", price: "14", pic: burger },
 ];
-export const MenuCard = () => {
-  const Burgers= DUMMY_DATA.map(data=>{
-    return(
-      <div className="grid">
-      <div class="col d-flex justify-content-center">
-        <Card
-          style={{
-            height: "10rem",
-            width: "37rem",
-            marginBottom: "2px",
-            marginTop: "5px",
-            backgroundColor: "wheat",
-          }}
-        >
-          <div className="d-flex flex-row">
-            <div className="d-flex flex-column">
-              <Container style={{ height: "25px" }}>
-                <Card
-                  style={{
-                    height: "40px",
-                    width: "21rem",
-                    backgroundColor: "wheat",
-                    boxShadow: "0px 0px",
-                    marginTop: "7px",
-                  }}
-                >
-                  <h4 className="menuHeading"> {data.item}</h4>
-                </Card>
-                <Card
-                  style={{
-                    height: "40px",
-                    width: "21rem",
-                    backgroundColor: "wheat",
-                    boxShadow: "0px 0px",
-                    marginTop: "7px",
-                  }}
-                >
-                  <p style={{ fontSize: "15px" }}>{data.recipe}</p>{" "}
-                </Card>
-                <Card
-                  style={{
-                    height: "20px",
-                    width: "21rem",
-                    backgroundColor: "wheat",
-                    boxShadow: "0px 0px",
-                    marginTop: "7px",
-                  }}
-                >
-                  <p style={{ fontSize: "15px" }}>3187kj</p>
-                </Card>
-                <Card
-                  style={{
-                    height: "25px",
-                    width: "21rem",
-                    backgroundColor: "wheat",
-                    boxShadow: "0px 0px",
-                    marginTop: "7px",
-                  }}
-                >
-                  <div className="d-flex flex-row">
-                    <FaRupeeSign
-                      size={"17px"}
-                      style={{ marginTop: "7px" }}
-                    ></FaRupeeSign>
-                    <p
-                      style={{
-                        fontSize: "20px",
-                        textAlign: "center",
-                      }}
-                    >
-                      {data.price}{" "}
-                    </p>
-                  </div>
-                </Card>
-              </Container>
-            </div>
-            <div class="col d-flex justify-content-center ">
-              <img
-                alt=""
+export const Burgers= DUMMY_DATA.map(data=>{
+  return(
+    <div className="grid">
+    <div class="col d-flex justify-content-center">
+      <Card
+        style={{
+          height: "10rem",
+          width: "37rem",
+          marginBottom: "2px",
+          marginTop: "5px",
+          backgroundColor: "wheat",
+        }}
+      >
+        <div className="d-flex flex-row">
+          <div className="d-flex flex-column">
+            <Container style={{ height: "25px" }}>
+              <Card
                 style={{
-                  height: "130px",
-                  width: "150px",
-                  marginLeft: "55px",
-                  marginTop: "16px",
+                  height: "40px",
+                  width: "21rem",
+                  backgroundColor: "wheat",
+                  boxShadow: "0px 0px",
+                  marginTop: "7px",
                 }}
-                src={data.pic}
-              ></img>
-            </div>
+              >
+                <h4 className="menuHeading"> {data.item}</h4>
+              </Card>
+              <Card
+                style={{
+                  height: "40px",
+                  width: "21rem",
+                  backgroundColor: "wheat",
+                  boxShadow: "0px 0px",
+                  marginTop: "7px",
+                }}
+              >
+                <p style={{ fontSize: "15px" }}>{data.recipe}</p>{" "}
+              </Card>
+              <Card
+                style={{
+                  height: "20px",
+                  width: "21rem",
+                  backgroundColor: "wheat",
+                  boxShadow: "0px 0px",
+                  marginTop: "7px",
+                }}
+              >
+                <p style={{ fontSize: "15px" }}>3187kj</p>
+              </Card>
+              <Card
+                style={{
+                  height: "25px",
+                  width: "21rem",
+                  backgroundColor: "wheat",
+                  boxShadow: "0px 0px",
+                  marginTop: "7px",
+                }}
+              >
+                <div className="d-flex flex-row">
+                  <FaRupeeSign
+                    size={"17px"}
+                    style={{ marginTop: "7px" }}
+                  ></FaRupeeSign>
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      textAlign: "center",
+                    }}
+                  >
+                    {data.price}{" "}
+                  </p>
+                </div>
+              </Card>
+            </Container>
           </div>
-        </Card>
-      </div>
+          <div class="col d-flex justify-content-center ">
+            <img
+              alt=""
+              style={{
+                height: "130px",
+                width: "150px",
+                marginLeft: "55px",
+                marginTop: "16px",
+              }}
+              src={data.pic}
+            ></img>
+          </div>
+        </div>
+      </Card>
     </div>
+  </div>
+
+  )
+})
+export const MenuCard = () => {
   
-    )
-  })
   return (
     <>
       <div className="grid justify-content-center">

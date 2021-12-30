@@ -3,6 +3,11 @@
 .appbar {
   background: #0c043b;
 }
+.ListHeading{
+  font-family: "Fuzzy Bubbles", cursive;
+  margin-left: 5rem;
+  font-size: 1.7rem;
+}
 .heading {
   font-family: "Fuzzy Bubbles", cursive;
   margin-left: 5rem;
@@ -85,9 +90,10 @@ body {
 }
 .grid{
   display: grid;
-  grid-gap: 50px 100px;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
+  margin-left: 13px;
+  grid-gap: 1px ;
+  grid-template-columns: auto auto ;
+  padding-top: 1px;
+  padding-bottom: 10px;
 }
 

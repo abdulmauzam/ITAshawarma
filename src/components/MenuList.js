@@ -1,22 +1,25 @@
 import React from "react";
 import { Card } from "@material-ui/core";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./menu.css";
+import { Burgers } from "./MenuCard";
 
+export const MenuList = () => {
 
-export const Menu = () => {
   
   return(<>
-    <div className="heading">Burgers</div>
-    <div className="heading">Sandwiches</div>
-    <div className="heading">Pizzas</div>
-    <div className="heading">Salads</div>
-    <div className="heading">Shawarma</div>
-    <div className="heading">Fries</div>
-    <div className="heading">Pasta</div>
-    <div className="heading">Deserts</div>
-    <div className="heading">Milkshakes</div>
-    <div className="heading">Beverages</div>
+    <div className="ListHeading">Burgers</div>
+  <div className="grid ">{Burgers}</div>
+    
+    <div className="ListHeading">Sandwiches</div>
+    <div className="ListHeading">Pizzas</div>
+    <div className="ListHeading">Salads</div>
+    <div className="ListHeading">Shawarma</div>
+    <div className="ListHeading">Fries</div>
+    <div className="ListHeading">Pasta</div>
+    <div className="ListHeading">Deserts</div>
+    <div className="ListHeading">Milkshakes</div>
+    <div className="ListHeading">Beverages</div>
 
     
     </>);

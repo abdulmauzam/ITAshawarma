@@ -9,14 +9,16 @@ import Button from "@mui/material/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MenuCard } from "./components/MenuCard";
 import { MenuTabBar } from "./components/MenuTabBar";
-
+import { MenuList } from "./components/MenuList";
+import ApplicationBar from "./components/Homescreen/ApplicationBar";
 export default function App() {
   return (
     <>
   
       <img src={fries} style={{ height: "320px", width: "100%" }}></img>
-
+<ApplicationBar/>
       <MenuTabBar/>
+      <MenuList/>     
       <MenuCard/>
  
     </>
