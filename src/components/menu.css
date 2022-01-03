@@ -1,4 +1,5 @@
-@import url(https://fonts.google.com/specimen/Fuzzy+Bubbles#standard-styles);
+
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuzzy+Bubbles&display=swap);
 
 .appbar {
   background: #0c043b;
@@ -84,7 +85,41 @@ body {
   border: 3px solid #2ecc71;
   right: -25%;
 }
-
+.heading2 {
+  font-family: "Fuzzy Bubbles", cursive;
+  margin-left: 1.8rem;
+  margin-top: 0.9rem;
+  text-align: center;
+  color: white;
+}
+.home{
+  font-family: "Fuzzy Bubbles", cursive;
+  
+  text-align: center;
+  background-color: #0c043b;
+  color: white;
+}
+.homeButton{
+  margin-left: 35rem;
+}
+.imageHeading{
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
+}
+.cartButton{
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  width: 125px;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 5.5px;
+  padding: 0 3%;
+  margin-left: 25px;
+}
 .menuHeading{
   font-family: "Fuzzy Bubbles", cursive;
 }
