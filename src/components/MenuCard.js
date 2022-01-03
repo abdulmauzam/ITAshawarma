@@ -113,7 +113,7 @@ export const MenuCard = () => {
     <>
       <div className="grid justify-content-center">
         
-      {Burgers}
+     
       </div>
     </>
   );

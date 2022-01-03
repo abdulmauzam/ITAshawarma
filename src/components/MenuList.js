@@ -1,27 +1,32 @@
 import React from "react";
-import { Card } from "@material-ui/core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./menu.css";
 import { Burgers } from "./MenuCard";
 
 export const MenuList = () => {
+  return (
+    <>
+      <div className="ListHeading" id="burgers">Burgers</div>
+      <div className="grid ">{Burgers}</div>
 
-  
-  return(<>
-    <div className="ListHeading">Burgers</div>
-  <div className="grid ">{Burgers}</div>
-    
-    <div className="ListHeading">Sandwiches</div>
-    <div className="ListHeading">Pizzas</div>
-    <div className="ListHeading">Salads</div>
-    <div className="ListHeading">Shawarma</div>
-    <div className="ListHeading">Fries</div>
-    <div className="ListHeading">Pasta</div>
-    <div className="ListHeading">Deserts</div>
-    <div className="ListHeading">Milkshakes</div>
-    <div className="ListHeading">Beverages</div>
-
-    
-    </>);
-
+      <div className="ListHeading" id="sandwiches">Sandwiches</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="pizzas">Pizzas</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="salads">Salads</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="shawarma">Shawarma</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="fries">Fries</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="pasta" >Pasta</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="deserts">Deserts</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="milkshakes">Milkshakes</div>
+      <div className="grid ">{Burgers}</div>
+      <div className="ListHeading" id="beverages">Beverages</div>
+      <div className="grid ">{Burgers}</div>
+    </>
+  );
 };

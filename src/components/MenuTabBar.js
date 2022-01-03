@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll';
 import { Card } from "@material-ui/core";
 export const MenuTabBar = () => {
     return (
@@ -8,61 +9,61 @@ export const MenuTabBar = () => {
       >
         <div class="col d-flex justify-content-center" className="tabHeading">
           <ul class="nav justify-content-center">
-            <li class="nav-item">
+            <Link activeClass="burgers" class="nav-item">
               <a
                 class="nav-link "
                 aria-current="page"
                 style={{ color: "white" }}
-                href="#"
+                href="burgers"
               >
                 Burgers
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="sandwiches" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="sandwiches">
                 Sandwiches
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="pizzas" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="pizzas">
                 Pizzas
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="salads" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="salads">
                 Salads
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="shawarma" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="shawarma">
                 Shawarma
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="fries" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="fries">
                 Fries
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="pasta" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="pasta">
                 Pasta
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="deserts" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="deserts">
                 Deserts
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="milkshakes" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="milkshakes">
                 Milkshakes
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style={{ color: "white" }} href="#">
+            </Link>
+            <Link to="beverages" class="nav-item">
+              <a class="nav-link" style={{ color: "white" }} href="bevarages" >
                 Beverages
               </a>
-            </li>
+            </Link>
           </ul>
         </div>
       </Card>  

@@ -96,4 +96,9 @@ body {
   padding-top: 1px;
   padding-bottom: 10px;
 }
+.bimage{
+  height: 320px;
+  width: 100%;
+  background-size: 100% 100%;
+}
 
