@@ -1,0 +1,57 @@
+@import url(https://fonts.google.com/specimen/Fuzzy+Bubbles#standard-styles);
+.modalImage {
+  height: 8rem;
+  width: 8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-self: center;
+}
+.modalHeader {
+  background-color: #0c043b;
+  height: 4rem;
+}
+.modalDescription {
+  text-align: center;
+  font-family: "Fuzzy bubbles", cursive;
+  font-size: 20px;
+}
+.noItemsDiv {
+  display: flex;
+  justify-content: center;
+}
+.decButton {
+  width: 3rem;
+  border-radius: 4rem;
+  margin-right: 25px;
+  background-color: #0c043b;
+  color: white;
+  font-size: 2rem;
+}
+.noItems {
+  text-align: center;
+  font-family: "Fuzzy bubbles", cursive;
+  font-size: 30px;
+}
+.incButton {
+  width: 3rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 4rem;
+  margin-left: 25px;
+  background-color: #0c043b;
+}
+.modalFooter {
+  background-color: #0c043b;
+  height: 4rem;
+ 
+}
+
+.addToCartButton {
+  background-color: black;
+  font-family: "Fuzzy bubbles", cursive;
+  font-size: 25px;
+  color: white;
+margin-right: 280px;
+}
