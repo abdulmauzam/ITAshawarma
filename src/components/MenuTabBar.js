@@ -7,7 +7,7 @@ export const MenuTabBar = () => {
         <Card
         style={{ height: "50px", width: "100%", backgroundColor: "#0c043b" }}
       >
-        <div class="col d-flex justify-content-center" className="tabHeading">
+        <div class="d-flex col justify-content-center" className="tabHeading">
           <ul class="nav justify-content-center">
             <Link activeClass="burgers" class="nav-item">
               <a

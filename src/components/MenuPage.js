@@ -11,8 +11,9 @@ var cardStyle ={
     backgroundImage:"url("+ fries+")"
 }
 export const MenuPage = () => {
+    
     return (
-        <div>
+        <>
         <Card style={cardStyle} className="bimage"> 
         <MenuCartBar/>
         </Card>
@@ -20,6 +21,6 @@ export const MenuPage = () => {
               <MenuTabBar/>
               <MenuList/>     
               <MenuCard/>
-        </div>
+        </>
     )
 }

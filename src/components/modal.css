@@ -47,6 +47,9 @@
   height: 4rem;
  
 }
+.iconDiv{
+    align-items: center;
+}
 
 .addToCartButton {
   background-color: black;

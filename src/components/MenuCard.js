@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@material-ui/core";
 import { Container } from "react-bootstrap";
 import { FaRupeeSign } from "react-icons/fa";
@@ -6,17 +6,22 @@ import shawarma from "../images/shawarma.jpeg";
 import burger from "../images/chickenBurger.jpeg";
 const DUMMY_DATA = [
   {
+    id:1,
     item: "shawarma",
     recipe: "lettuce,tomato,meat,lettuce,tomato,meat,lettuce,tomato,meat",
     price: "124",
     pic: shawarma,
   },
-  { item: "shake", recipe: "meat", price: "14", pic: burger },
+  { id:2,item: "shake", recipe: "meat", price: "14", pic: burger },
 ];
+
+
 export const Burgers= DUMMY_DATA.map(data=>{
+ 
   return(
-    <div className="grid">
-    <div class="col d-flex justify-content-center">
+    <div >
+    <div className="grid" >
+    <div class="col d-flex justify-content-center" >
       <Card
         style={{
           height: "10rem",
@@ -25,6 +30,7 @@ export const Burgers= DUMMY_DATA.map(data=>{
           marginTop: "5px",
           backgroundColor: "wheat",
         }}
+        
       >
         <div className="d-flex flex-row">
           <div className="d-flex flex-column">
@@ -104,11 +110,28 @@ export const Burgers= DUMMY_DATA.map(data=>{
       </Card>
     </div>
   </div>
-
+  </div>
   )
 })
 export const MenuCard = () => {
-  
+  let [dummy,setDummy]=useState([{
+    title:"cheese",
+    image:{shawarma},
+    price:"25rs",
+    kj:"3168ks",
+  }])
+ 
+  const cardClick =()=>{
+    console.log(dummy.kj)
+    /*setDummy((prevState)=>({
+    ...prevState,
+    title:"aj;sdfhla",
+
+   
+    }))*/
+    
+}
+
   return (
     <>
       <div className="grid justify-content-center">
