@@ -8,6 +8,14 @@
 
   align-self: center;
 }
+.grid{
+  display: grid;
+  margin-left: 13px;
+  grid-gap: 1px ;
+  grid-template-columns: auto auto ;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
 .modalHeader {
   background-color: #0c043b;
   height: 4rem;
