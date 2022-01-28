@@ -10,13 +10,13 @@ export const MenuList = (props) => {
       <div className="grid ">{props.Menu}</div>
 
       <div className="ListHeading" id="sandwiches">Sandwiches</div>
-      <div className="grid ">{props.Menu}</div>
+      <div className="grid ">{props.Sandwiches}</div>
       <div className="ListHeading" id="pizzas">Pizzas</div>
       <div className="grid ">{props.Menu}</div>
       <div className="ListHeading" id="salads">Salads</div>
       <div className="grid ">{props.Menu}</div>
       <div className="ListHeading" id="shawarma">Shawarma</div>
-      <div className="grid ">{props.Menu}</div>
+      <div className="grid ">{props.Shawarma}</div>
       <div className="ListHeading" id="fries">Fries</div>
       <div className="grid ">{props.Menu}</div>
       <div className="ListHeading" id="pasta" >Pasta</div>

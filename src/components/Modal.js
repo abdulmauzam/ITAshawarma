@@ -27,30 +27,66 @@ export const Modals = () => {
     price: "120",
   });
 
-  const [dummyData, setDummyData] = useState([]);
+  const [burgers, setBurgers] = useState([]);
+  const [shawarmas,setShawarmas]=useState([]);
+  const [sandwiches,setSandwiches]=useState([]);
 
   useEffect(() => {
-    axios
-      .get(
+    const fetchmeals = async () => {
+      const response = await fetch(
         "https://ita-shawarma-default-rtdb.asia-southeast1.firebasedatabase.app/MENU.json"
-      )
-      .then((response) => {
-        let data = response.data.BURGERS;
-        const Burgers = [];
-        for (var i=0;i<data.length;i++) {
-          console.log(data[i].name)
-          Burgers.push({
-            name= data[i].name,
-            price= data[i].price,
-            description= data[i].Description,
-            image= data[i].image,
-          });
-          setDummyData(Burgers)
-          console.log(dummyData.length)
-        }
-      });
-  }, []);
+      );
+      const responseData = await response.json();
+      
+      
+      const Burgers = responseData.BURGERS;
+      const loadedBurgers = [];
+      for (var key in Burgers) {
+        loadedBurgers.push({
+          id: key,
+          name: Burgers[key].name,
+          description: Burgers[key].Description,
+          image: Burgers[key].image,
+          price: Burgers[key].price,
+        });
+      }
 
+      const Shawarmas = responseData.Shawarma;
+      console.log(Shawarmas)
+      const loadedShawarma= [];
+      for (var key in Shawarmas) {
+        loadedShawarma.push({
+          id: key,
+          name: Shawarmas[key].name,
+          description: Shawarmas[key].Description,
+          image: Shawarmas[key].image,
+          price: Shawarmas[key].price,
+        });
+      }
+
+      const Sandwiches = responseData.SANDWIHCES;
+      console.log(Sandwiches)
+      const loadedSandwiches= [];
+      for (var key in Sandwiches) {
+        
+        loadedSandwiches.push({
+          id: key,
+          name: Sandwiches[key].name,
+          description: Sandwiches[key].Description,
+          image: Sandwiches[key].image,
+          price: Sandwiches[key].price,
+        });
+      }
+      
+
+      setSandwiches(loadedSandwiches)
+      setShawarmas(loadedShawarma)
+      setBurgers(loadedBurgers);
+    };
+    fetchmeals();
+  }, []);
+console.log(sandwiches)
+  
   const buttonClick = (items) => {
     setShow(true);
     setModalData((prevData) => ({
@@ -59,8 +95,200 @@ export const Modals = () => {
       price: items.price,
     }));
   };
-  const Menu = dummyData.map((items) => {
-    console.log(items)
+  const Menu = burgers.map((items) => {
+    console.log(items);
+    return (
+      <div onClick={() => buttonClick(items)}>
+        <div className="grid">
+          <div class="col d-flex justify-content-center">
+            <Card
+              style={{
+                height: "10rem",
+                width: "37rem",
+                marginBottom: "2px",
+                marginTop: "5px",
+                backgroundColor: "wheat",
+              }}
+            >
+              <div className="d-flex flex-row">
+                <div className="d-flex flex-column">
+                  <Container style={{ height: "25px" }}>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <h4 className="menuHeading"> {items.name}</h4>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>{items.description}</p>{" "}
+                    </Card>
+                    <Card
+                      style={{
+                        height: "20px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>3187kj</p>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "25px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <div className="d-flex flex-row">
+                        <FaRupeeSign
+                          size={"17px"}
+                          style={{ marginTop: "7px" }}
+                        ></FaRupeeSign>
+                        <p
+                          style={{
+                            fontSize: "20px",
+                            textAlign: "center",
+                          }}
+                        >
+                          {items.price}{" "}
+                        </p>
+                      </div>
+                    </Card>
+                  </Container>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                  <img
+                    alt=""
+                    style={{
+                      height: "130px",
+                      width: "150px",
+                      marginLeft: "55px",
+                      marginTop: "16px",
+                    }}
+                    src={items.image}
+                  ></img>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  const Sandwiches = sandwiches.map((items) => {
+    console.log(items);
+    return (
+      <div onClick={() => buttonClick(items)}>
+        <div className="grid">
+          <div class="col d-flex justify-content-center">
+            <Card
+              style={{
+                height: "10rem",
+                width: "37rem",
+                marginBottom: "2px",
+                marginTop: "5px",
+                backgroundColor: "wheat",
+              }}
+            >
+              <div className="d-flex flex-row">
+                <div className="d-flex flex-column">
+                  <Container style={{ height: "25px" }}>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <h4 className="menuHeading"> {items.name}</h4>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>{items.description}</p>{" "}
+                    </Card>
+                    <Card
+                      style={{
+                        height: "20px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>3187kj</p>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "25px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <div className="d-flex flex-row">
+                        <FaRupeeSign
+                          size={"17px"}
+                          style={{ marginTop: "7px" }}
+                        ></FaRupeeSign>
+                        <p
+                          style={{
+                            fontSize: "20px",
+                            textAlign: "center",
+                          }}
+                        >
+                          {items.price}{" "}
+                        </p>
+                      </div>
+                    </Card>
+                  </Container>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                  <img
+                    alt=""
+                    style={{
+                      height: "130px",
+                      width: "150px",
+                      marginLeft: "55px",
+                      marginTop: "16px",
+                    }}
+                    src={items.image}
+                  ></img>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  const shawarma= shawarmas.map((items) => {
+    console.log(items);
     return (
       <div onClick={() => buttonClick(items)}>
         <div className="grid">
@@ -158,7 +386,7 @@ export const Modals = () => {
 
   return (
     <>
-      <MenuList Menu={Menu}></MenuList>
+      <MenuList Menu={Menu} Shawarma={shawarma} Sandwiches={Sandwiches}></MenuList>
 
       <Modal
         show={show}
