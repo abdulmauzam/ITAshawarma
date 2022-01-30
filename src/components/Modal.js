@@ -31,6 +31,7 @@ export const Modals = () => {
   const [shawarmas,setShawarmas]=useState([]);
   const [sandwiches,setSandwiches]=useState([]);
   const [pizzas,setPizzas]=useState([]);
+  const [salads,setSalads]=useState([]);
 
   useEffect(() => {
     const fetchmeals = async () => {
@@ -90,8 +91,21 @@ export const Modals = () => {
           price: Pizzas[key].price,
         });
       }
+
+      const Salads = responseData.SALADS;
+      console.log(Salads)
+      const loadedSalads= [];
+      for (var key in Salads) {
+        loadedSalads.push({
+          id: key,
+          name: Salads[key].name,
+          description: Salads[key].Description,
+          image: Salads[key].image,
+          price: Salads[key].price,
+        });
+      }
       
-      
+      setSalads(loadedSalads)
       setPizzas(loadedPizzas)
       setSandwiches(loadedSandwiches)
       setShawarmas(loadedShawarma)
@@ -111,6 +125,102 @@ export const Modals = () => {
     }));
   };
   const Burgers= burgers.map((items) => {
+ 
+    return (
+      <div onClick={() => buttonClick(items)}>
+        <div className="grid">
+          <div class="col d-flex justify-content-center">
+            <Card
+              style={{
+                height: "10rem",
+                width: "37rem",
+                marginBottom: "2px",
+                marginTop: "5px",
+                backgroundColor: "wheat",
+              }}
+            >
+              <div className="d-flex flex-row">
+                <div className="d-flex flex-column">
+                  <Container style={{ height: "25px" }}>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <h4 className="menuHeading"> {items.name}</h4>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>{items.description}</p>{" "}
+                    </Card>
+                    <Card
+                      style={{
+                        height: "20px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>3187kj</p>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "25px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <div className="d-flex flex-row">
+                        <FaRupeeSign
+                          size={"17px"}
+                          style={{ marginTop: "7px" }}
+                        ></FaRupeeSign>
+                        <p
+                          style={{
+                            fontSize: "20px",
+                            textAlign: "center",
+                          }}
+                        >
+                          {items.price}{" "}
+                        </p>
+                      </div>
+                    </Card>
+                  </Container>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                  <img
+                    alt=""
+                    style={{
+                      height: "130px",
+                      width: "150px",
+                      marginLeft: "55px",
+                      marginTop: "16px",
+                    }}
+                    src={items.image}
+                  ></img>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  const Salads= salads.map((items) => {
  
     return (
       <div onClick={() => buttonClick(items)}>
@@ -495,7 +605,8 @@ export const Modals = () => {
 
   return (
     <>
-      <MenuList Burgers={Burgers} Shawarma={shawarma} Sandwiches={Sandwiches} Pizzas={pizza}></MenuList>
+      <MenuList Burgers={Burgers} Shawarma={shawarma} Sandwiches={Sandwiches} 
+      Salads={Salads} Pizzas={pizza}></MenuList>
 
       <Modal
         show={show}
