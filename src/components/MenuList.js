@@ -6,27 +6,27 @@ import { Burgers } from "./MenuCard";
 export const MenuList = (props) => {
   return (
     <>
-      <div className="ListHeading" id="burgers">Burgers</div>
-      <div className="grid ">{props.Menu}</div>
+      <div className="ListHeading" >Burgers</div>
+      <div className="grid " key="burgers">{props.Burgers}</div>
 
-      <div className="ListHeading" id="sandwiches">Sandwiches</div>
-      <div className="grid ">{props.Sandwiches}</div>
-      <div className="ListHeading" id="pizzas">Pizzas</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="salads">Salads</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="shawarma">Shawarma</div>
-      <div className="grid ">{props.Shawarma}</div>
-      <div className="ListHeading" id="fries">Fries</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="pasta" >Pasta</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="deserts">Deserts</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="milkshakes">Milkshakes</div>
-      <div className="grid ">{props.Menu}</div>
-      <div className="ListHeading" id="beverages">Beverages</div>
-      <div className="grid ">{props.Menu}</div>
+      <div className="ListHeading" >Sandwiches</div>
+      <div className="grid " key="sandwiches">{props.Sandwiches}</div>
+      <div className="ListHeading" >Pizzas</div>
+      <div className="grid " key="pizzas">{props.Pizzas}</div>
+      <div className="ListHeading" >Salads</div>
+      <div className="grid " key="salads">{props.Menu}</div>
+      <div className="ListHeading" >Shawarma</div>
+      <div className="grid "  key="shawarma">{props.Shawarma}</div>
+      <div className="ListHeading" >Fries</div>
+      <div className="grid " key="fries">{props.Menu}</div>
+      <div className="ListHeading"  >Pasta</div>
+      <div className="grid " key="pasta" >{props.Menu}</div>
+      <div className="ListHeading" >Deserts</div>
+      <div className="grid " key="deserts">{props.Menu}</div>
+      <div className="ListHeading" >Milkshakes</div>
+      <div className="grid " key="milkshakes">{props.Menu}</div>
+      <div className="ListHeading" >Beverages</div>
+      <div className="grid " key="beverages">{props.Menu}</div>
     </>
   );
 };
