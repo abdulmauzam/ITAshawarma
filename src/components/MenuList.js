@@ -22,7 +22,7 @@ export const MenuList = (props) => {
       <div className="ListHeading"  >Pasta</div>
       <div className="grid " key="pasta" >{props.Pasta}</div>
       <div className="ListHeading" >Deserts</div>
-      <div className="grid " key="deserts">{props.Menu}</div>
+      <div className="grid " key="deserts">{props.Deserts}</div>
       <div className="ListHeading" >Milkshakes</div>
       <div className="grid " key="milkshakes">{props.Menu}</div>
       <div className="ListHeading" >Beverages</div>
