@@ -24,7 +24,7 @@ export const MenuList = (props) => {
       <div className="ListHeading" >Deserts</div>
       <div className="grid " key="deserts">{props.Deserts}</div>
       <div className="ListHeading" >Milkshakes</div>
-      <div className="grid " key="milkshakes">{props.Menu}</div>
+      <div className="grid " key="milkshakes">{props.Milkshakes}</div>
       <div className="ListHeading" >Beverages</div>
       <div className="grid " key="beverages">{props.Menu}</div>
     </>
