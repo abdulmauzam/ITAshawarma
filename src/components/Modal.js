@@ -36,6 +36,7 @@ export const Modals = () => {
   const [pasta, setPasta] = useState([]);
   const [deserts, setDeserts] = useState([]);
   const [milkshakes,setMilkshakes]=useState([]);
+  const [beverages,setBeverages]=useState([]);
 
   useEffect(() => {
     const fetchmeals = async () => {
@@ -57,7 +58,7 @@ export const Modals = () => {
       }
 
       const Shawarmas = responseData.Shawarma;
-      console.log(Shawarmas);
+      
       const loadedShawarma = [];
       for (var key in Shawarmas) {
         loadedShawarma.push({
@@ -70,7 +71,7 @@ export const Modals = () => {
       }
 
       const Sandwiches = responseData.SANDWIHCES;
-      console.log(Sandwiches);
+      
       const loadedSandwiches = [];
       for (var key in Sandwiches) {
         loadedSandwiches.push({
@@ -83,7 +84,7 @@ export const Modals = () => {
       }
 
       const Pizzas = responseData.PIZZAS;
-      console.log(Pizzas);
+     
       const loadedPizzas = [];
       for (var key in Pizzas) {
         loadedPizzas.push({
@@ -96,7 +97,7 @@ export const Modals = () => {
       }
 
       const Salads = responseData.SALADS;
-      console.log(Salads);
+      
       const loadedSalads = [];
       for (var key in Salads) {
         loadedSalads.push({
@@ -109,7 +110,7 @@ export const Modals = () => {
       }
 
       const Fries = responseData.FRIES;
-      console.log(Fries);
+      
       const loadedFries = [];
       for (var key in Fries) {
         loadedFries.push({
@@ -122,7 +123,7 @@ export const Modals = () => {
       }
 
       const Pasta = responseData.PASTA;
-      console.log(Pasta);
+      
       const loadedPasta = [];
       for (var key in Pasta) {
         loadedPasta.push({
@@ -135,7 +136,7 @@ export const Modals = () => {
       }
 
       const Desert = responseData.DESERTS;
-      console.log(Desert);
+     
       const loadedDeserts = [];
       for (var key in Desert) {
         loadedDeserts.push({
@@ -148,7 +149,7 @@ export const Modals = () => {
       }
 
       const Milkshakes = responseData.MILKSHAKES;
-      console.log(Milkshakes);
+      
       const loadedMilkshakes = [];
       for (var key in Milkshakes) {
         loadedMilkshakes.push({
@@ -160,16 +161,16 @@ export const Modals = () => {
         });
       }
 
-      const Milkshakes = responseData.MILKSHAKES;
-      console.log(Milkshakes);
-      const loadedMilkshakes = [];
-      for (var key in Milkshakes) {
-        loadedMilkshakes.push({
+      const Beverages = responseData.BEVERAGES;
+      console.log(Beverages);
+      const loadedBeverages = [];
+      for (var key in Beverages) {
+        loadedBeverages.push({
           id: key,
-          name: Milkshakes[key].name,
-          description: Milkshakes[key].Description,
-          image: Milkshakes[key].image,
-          price: Milkshakes[key].price,
+          name: Beverages[key].name,
+          description: Beverages[key].Description,
+          image: Beverages[key].image,
+          price: Beverages[key].price,
         });
       }
 
@@ -181,7 +182,8 @@ export const Modals = () => {
       setShawarmas(loadedShawarma);
       setBurgers(loadedBurgers);
       setDeserts(loadedDeserts);
-      setMilkshakes(loadedMilkshakes)
+      setMilkshakes(loadedMilkshakes);
+      setBeverages(loadedBeverages)
      
     };
     fetchmeals();
@@ -1056,6 +1058,102 @@ export const Modals = () => {
     );
   });
 
+  const beveragess = beverages.map((items) => {
+    return (
+      <div onClick={() => buttonClick(items)}>
+        <div className="grid">
+          <div class="col d-flex justify-content-center">
+            <Card
+              style={{
+                height: "10rem",
+                width: "37rem",
+                marginBottom: "2px",
+                marginTop: "5px",
+                backgroundColor: "wheat",
+              }}
+            >
+              <div className="d-flex flex-row">
+                <div className="d-flex flex-column">
+                  <Container style={{ height: "25px" }}>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <h4 className="menuHeading"> {items.name}</h4>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "40px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>{items.description}</p>{" "}
+                    </Card>
+                    <Card
+                      style={{
+                        height: "20px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <p style={{ fontSize: "15px" }}>3187kj</p>
+                    </Card>
+                    <Card
+                      style={{
+                        height: "25px",
+                        width: "21rem",
+                        backgroundColor: "wheat",
+                        boxShadow: "0px 0px",
+                        marginTop: "7px",
+                      }}
+                    >
+                      <div className="d-flex flex-row">
+                        <FaRupeeSign
+                          size={"17px"}
+                          style={{ marginTop: "7px" }}
+                        ></FaRupeeSign>
+                        <p
+                          style={{
+                            fontSize: "20px",
+                            textAlign: "center",
+                          }}
+                        >
+                          {items.price}{" "}
+                        </p>
+                      </div>
+                    </Card>
+                  </Container>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                  <img
+                    alt=""
+                    style={{
+                      height: "130px",
+                      width: "150px",
+                      marginLeft: "55px",
+                      marginTop: "16px",
+                    }}
+                    src={items.image}
+                  ></img>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <>
       <MenuList
@@ -1068,6 +1166,7 @@ export const Modals = () => {
         Pasta={pastas}
         Deserts={Deserts}
         Milkshakes={milkshakess}
+        Beverages={beveragess}
       ></MenuList>
 
       <Modal
