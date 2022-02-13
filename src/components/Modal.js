@@ -160,6 +160,19 @@ export const Modals = () => {
         });
       }
 
+      const Milkshakes = responseData.MILKSHAKES;
+      console.log(Milkshakes);
+      const loadedMilkshakes = [];
+      for (var key in Milkshakes) {
+        loadedMilkshakes.push({
+          id: key,
+          name: Milkshakes[key].name,
+          description: Milkshakes[key].Description,
+          image: Milkshakes[key].image,
+          price: Milkshakes[key].price,
+        });
+      }
+
       setPasta(loadedPasta);
       setFries(loadedFries);
       setSalads(loadedSalads);
