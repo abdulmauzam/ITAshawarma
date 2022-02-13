@@ -22,10 +22,7 @@ export const Modals = () => {
   let iconStyles = { fontSize: "30px", color: "white" };
   const handleClose = () => setShow(false);
 
-  const [modalData, setModalData] = useState({
-    recipe: "brinjal",
-    price: "120",
-  });
+  const [modalData, setModalData] = useState({});
 
   const [burgers, setBurgers] = useState([]);
   const [shawarmas, setShawarmas] = useState([]);
@@ -35,8 +32,8 @@ export const Modals = () => {
   const [fries, setFries] = useState([]);
   const [pasta, setPasta] = useState([]);
   const [deserts, setDeserts] = useState([]);
-  const [milkshakes,setMilkshakes]=useState([]);
-  const [beverages,setBeverages]=useState([]);
+  const [milkshakes, setMilkshakes] = useState([]);
+  const [beverages, setBeverages] = useState([]);
 
   useEffect(() => {
     const fetchmeals = async () => {
@@ -58,7 +55,7 @@ export const Modals = () => {
       }
 
       const Shawarmas = responseData.Shawarma;
-      
+
       const loadedShawarma = [];
       for (var key in Shawarmas) {
         loadedShawarma.push({
@@ -71,7 +68,7 @@ export const Modals = () => {
       }
 
       const Sandwiches = responseData.SANDWIHCES;
-      
+
       const loadedSandwiches = [];
       for (var key in Sandwiches) {
         loadedSandwiches.push({
@@ -84,7 +81,7 @@ export const Modals = () => {
       }
 
       const Pizzas = responseData.PIZZAS;
-     
+
       const loadedPizzas = [];
       for (var key in Pizzas) {
         loadedPizzas.push({
@@ -97,7 +94,7 @@ export const Modals = () => {
       }
 
       const Salads = responseData.SALADS;
-      
+
       const loadedSalads = [];
       for (var key in Salads) {
         loadedSalads.push({
@@ -110,7 +107,7 @@ export const Modals = () => {
       }
 
       const Fries = responseData.FRIES;
-      
+
       const loadedFries = [];
       for (var key in Fries) {
         loadedFries.push({
@@ -123,7 +120,7 @@ export const Modals = () => {
       }
 
       const Pasta = responseData.PASTA;
-      
+
       const loadedPasta = [];
       for (var key in Pasta) {
         loadedPasta.push({
@@ -136,7 +133,7 @@ export const Modals = () => {
       }
 
       const Desert = responseData.DESERTS;
-     
+
       const loadedDeserts = [];
       for (var key in Desert) {
         loadedDeserts.push({
@@ -149,7 +146,7 @@ export const Modals = () => {
       }
 
       const Milkshakes = responseData.MILKSHAKES;
-      
+
       const loadedMilkshakes = [];
       for (var key in Milkshakes) {
         loadedMilkshakes.push({
@@ -183,8 +180,7 @@ export const Modals = () => {
       setBurgers(loadedBurgers);
       setDeserts(loadedDeserts);
       setMilkshakes(loadedMilkshakes);
-      setBeverages(loadedBeverages)
-     
+      setBeverages(loadedBeverages);
     };
     fetchmeals();
   }, []);
@@ -193,8 +189,9 @@ export const Modals = () => {
     setShow(true);
     setModalData((prevData) => ({
       ...prevData,
-      recipe: items.recipe,
+      Description: items.description,
       price: items.price,
+      image: items.image,
     }));
   };
   const Burgers = burgers.map((items) => {
@@ -1153,7 +1150,7 @@ export const Modals = () => {
       </div>
     );
   });
-
+  console.log(modalData);
   return (
     <>
       <MenuList
@@ -1192,8 +1189,8 @@ export const Modals = () => {
         </ModalHeader>
 
         <ModalBody>
-          <img className="modalImage"></img>
-          <p className="modalDescription">{modalData.description}</p>
+          <img className="modalImage" src={modalData.image}></img>
+          <p className="modalDescription">{modalData.Description}</p>
           <p className="modalDescription">{modalData.price}</p>
           <div className="noItemsDiv">
             <div className="d-flex flex-row">
